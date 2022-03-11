@@ -8,7 +8,7 @@ let animalArray = ['fish', 'cat', 'bird', 'dog'];
 console.log('Animals are: ', animalArray);
 
 // 1.a. TODO: Make an array with some favorite foods
-let favoriteFoods = ['Margherita pizza', 'veggie tacos', 'microbrews', 'coffee', 'lobster stuffed with tacos'];
+let favoriteFoods = ['margherita pizza', 'veggie tacos', 'microbrews', 'coffee', 'lobster stuffed with tacos'];
 
 // 1.b. TODO: Log your array of foods to the console with a message, similar 
 //      to the example above
@@ -76,23 +76,33 @@ console.log('The animals are now', animalArray);
 
 // 4.d TODO: Remove the food at the beginning of your array & 
 //     log both the food removed and the updated array
-unhealthyFood = favoriteFoods.shift();
+let unhealthyFood = favoriteFoods.shift();
 console.log(`Decided that it wasn't right to list ${unhealthyFood} first.`);
 console.log('Returned the list to', favoriteFoods);
 
 // 4.e (STRETCH) TODO: Replace the second food in your array
 //      with another one of your favorite foods.
 //      Then log the updated array.
+favoriteFoods[1] = unhealthyFood;
+console.log("There, at least it's not listed first now:", favoriteFoods);
 
 // 4.f (STRETCH) TODO: Sort your favoriteFoods array
 //     in reverse alphabetical order. Log the array.
+favoriteFoods.sort();
+console.log('I want to see these in reverse alphabetical order:', favoriteFoods.reverse());
+console.log(`(Now ${unhealthyFood} is back in front but I have plausible deniability.)`);
 
 // 4.g (STRETCH) TODO: Convert your array to a string
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string.
+console.log(`${favoriteFoods[0]} and ${favoriteFoods[1]} and ${favoriteFoods[2]} and ${favoriteFoods[3]} and ${favoriteFoods[4]}.`);
+//This looks very ugly to me, so I'm not sure if this is the preferred method.
 
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
 //     Then log the new array.
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
+let comboArray = animalArray.concat(favoriteFoods);
+comboArray.sort();
+console.log("The omnivore's dilemma:", comboArray);
